@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <title></title>
+  </head>
+  <body>
+    <div id="games"></div>
+    <script type="text/javascript">
+    var data;
+    var gameID;
+    var imgURL;
+
+    $(document).ready(function(){
+
+      $.ajax({
+        'async': false,
+        type: 'GET',
+        data: "JSON",
+        url: "https://static.nvidiagrid.net/supported-public-game-list/gfnpc.json",
+        success: function(response){
+            data = response;
+        }
+      });
+
+      for (i=0; i < 2; i++){ //Because we are limites in the number of calls to the Steam API
+
+        gameID = data[i].id;
+
+        var str = data[i].steamUrl;
+        var steamGameID = str.replace("https://store.steampowered.com/app/", "");
+
+        $.ajax({
+            'async': false,
+            type: 'GET',
+            data: "JSON",
+            url: "https://cors-anywhere.herokuapp.com/https://store.steampowered.com/api/appdetails?appids="+steamGameID,
+            success: function(response){
+              imgURL = response[steamGameID].data.header_image;
+            }
+        });
+
+        html  = "<div class='game'>";
+        //html += "<a target='_blank' href='"+data[i].steamUrl+"' download='"+data[i].title+"'>"
+        html += "<a target='_blank' href='"+imgURL+"' download='"+data[i].title+"'>"
+        html += "<img id='"+steamGameID+"' src='"+imgURL+"'></img>";
+        html += "</a>"
+        html += "</div>";
+
+        $('#games').append(html);
+
+
+      }
+
+
+    });
+    </script>
+  </body>
+</html>
