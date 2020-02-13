@@ -6,4 +6,6 @@ This mini project will let you know :
 * Where to buy the game at the best price
 * The best images that represents your game
 
-You can get the images here or https://mega.nz/#F!F19RGZ4K!tS5yH1VxPZW40f1-bsLmcw
+Check some cool pens https://codepen.io/collection/DPOJVe
+
+You can get the images directly from https://mega.nz/#F!F19RGZ4K!tS5yH1VxPZW40f1-bsLmcw
