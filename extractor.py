@@ -36,5 +36,4 @@ for game in games :
                 print(gameID + " " + game['title'] + "Doesn't exist ... Please contact GForceNow on the forum")
         else :
             print("Already have "  + gameID + " " + game['title'])
-
-print("You have " + steamCount + " Steam games")
+        print(str(steamCount) + " Steam games")
