@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>My GForce Now App</title>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<style media="screen">
+  li {
+    list-style-type: none;
+    display: inline;
+  }
+
+  img {
+    width: 100px;
+  }
+</style>
+
+<script type="text/javascript">
+  $( document ).ready(function() {
+    $.getJSON( "gfnpc.json", function( data ) {
+
+      var items = [];
+
+      $.each( data, function( key, val ) {
+        if(val.steamUrl != ""){
+
+          var str = val.steamUrl;
+          var res = str.replace("https://store.steampowered.com/app/", "");
+          items.push( "<li id='" + val.id + "'>" + "<a target='_blank' href='"+ str +"'>" +"<img src='images/"+ res +".jpg'></img>" + "</a>" + "</li>" );
+
+        } else {
+          //TODO
+        }
+      });
+
+      $( "<ul/>", {
+        "class": "my-new-list",
+        html: items.join( "" )
+      }).appendTo( "body" );
+
+    });
+  });
+</script>
+
+</body>
+
+</html>
