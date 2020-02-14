@@ -49,6 +49,7 @@
             if (!(steam[res].data === undefined)) {
               if (!(steam[res].data.price_overview === undefined)) {
                 price = price + steam[res].data.price_overview.initial;
+                console.log(price);
               }
             }
           });
@@ -58,7 +59,7 @@
 
       });
 
-      $('h1').append("Total number of games "+ data.length+ " Total price " + price);
+      $('h1').append("Total number of games "+ data.length);
 
       $( "<ul/>", {
         "class": "my-new-list",
