@@ -17,6 +17,8 @@
 
 <body>
 
+<h1></h1>
+
 <style media="screen">
   li {
     list-style-type: none;
@@ -30,9 +32,11 @@
 
 <script type="text/javascript">
   $( document ).ready(function() {
+
     $.getJSON( "gfnpc.json", function( data ) {
 
       var items = [];
+      var price = 0;
 
       $.each( data, function( key, val ) {
         if(val.steamUrl != ""){
@@ -41,10 +45,20 @@
           var res = str.replace("https://store.steampowered.com/app/", "");
           items.push( "<li id='" + val.id + "'>" + "<a target='_blank' href='"+ str +"'>" +"<img src='images/"+ res +".jpg'></img>" + "</a>" + "</li>" );
 
+          $.getJSON("json/"+ res +".json", function( steam ) {
+            if (!(steam[res].data === undefined)) {
+              if (!(steam[res].data.price_overview === undefined)) {
+                price = price + steam[res].data.price_overview.initial;
+              }
+            }
+          });
         } else {
           //TODO
         }
+
       });
+
+      $('h1').append("Total number of games "+ data.length+ " Total price " + price);
 
       $( "<ul/>", {
         "class": "my-new-list",
