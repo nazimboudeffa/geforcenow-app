@@ -8,4 +8,4 @@ This mini project will let you know :
 
 Check some cool pens https://codepen.io/collection/DPOJVe
 
-You can get the images directly from https://mega.nz/#F!F19RGZ4K!tS5yH1VxPZW40f1-bsLmcw
+You can get the images directly from my Mega account but it's not like if you update them with the script https://mega.nz/#F!F19RGZ4K!tS5yH1VxPZW40f1-bsLmcw
