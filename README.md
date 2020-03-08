@@ -16,7 +16,7 @@ I have made this repo just after the launch of GFN and just before the big compa
 
 - https://www.blizzard.com/en-us/games/
 - https://www.activision.com/fr/games
-- https://bethesda.net/fr/store/home
+- https://bethesda.net/fr/store/home (Kept Only Wolfenstein YB)
 - https://www.2k.com/en-US/games/
 - https://www.thelongdark.com/
 
