@@ -54,7 +54,16 @@
             }
           });
         } else {
-          //TODO
+          switch (val.publisher) {
+            case "Ubisoft" :
+              items.push( "<li id='" + val.id + "'>" + "<a target='_blank' href='https://www.ubisoft.com/en-us/games'>" +"<img src='logos/ubisoft.jpg'></img>" + "</a>" + "</li>" );
+            break;
+            case "Epic Games, Inc." :
+              items.push( "<li id='" + val.id + "'>" + "<a target='_blank' href='https://www.epicgames.com/store/fr/free-games'>" +"<img src='logos/epicgames.jpg'></img>" + "</a>" + "</li>" );
+            break;
+            default :
+              items.push( "<li id='" + val.id + "'>" + "<a target='_blank' href='https://www.nvidia.com/fr-fr/geforce-now/games'>" +"<img src='logos/gforcenow.jpg'></img>" + "</a>" + "</li>" );
+          }
         }
 
       });
