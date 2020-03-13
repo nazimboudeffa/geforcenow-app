@@ -14,6 +14,10 @@ app.get('/', function (req, res) {
   res.render('index')
 })
 
+app.get('/all', function (req, res) {
+  res.render('all')
+})
+
 let port = 3000;
 
 app.listen(port, function () {

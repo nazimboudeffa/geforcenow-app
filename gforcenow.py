@@ -20,6 +20,7 @@ def menu():
                       A: Grab An Image
                       B: Grab All Images
                       C: Sync with GForce
+                      D: Grab the data file from www.gfnlist.com
                       Q: Quit/Log Out
 
                       Please enter your choice: """)
@@ -29,7 +30,9 @@ def menu():
     elif choice == "B" or choice =="b":
         grabAll()
     elif choice == "C" or choice =="c":
-        synch()
+        todo()
+    elif choice == "D" or choice =="d":
+        todo()
     elif choice=="Q" or choice=="q":
         sys.exit
     else:
@@ -40,15 +43,19 @@ def menu():
 def todo():
     print("todo")
 
+def grabDataFile():
+    if not os.path.exists('public/data/data.json') :
+        fs = wget.download(url='https://www.gfnlist.com/data.json', out='public/data/data.json')
+
 def grabAll():
     steamCount = 0
-    if not os.path.exists('public/gfnpc.json') :
-        fs = wget.download(url='https://static.nvidiagrid.net/supported-public-game-list/gfnpc.json', out='public/gfnpc.json')
-        with open('public/gfnpc.json', encoding="utf8") as f :
+    if not os.path.exists('public/data/gfnpc.json') :
+        fs = wget.download(url='https://static.nvidiagrid.net/supported-public-game-list/gfnpc.json', out='public/data/gfnpc.json')
+        with open('public/data/gfnpc.json', encoding="utf8") as f :
             games_list = f.read()
             games = json.loads(games_list)
     else :
-        with open('public/gfnpc.json', encoding="utf8") as f :
+        with open('public/data/gfnpc.json', encoding="utf8") as f :
             games_list = f.read()
             games = json.loads(games_list)
 
