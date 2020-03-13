@@ -131,8 +131,12 @@
 
           var str = val.steamUrl;
           var res = str.replace("https://store.steampowered.com/app/", "");
-
-          items.push( "<li id='" + val.id + "'>" + "<a target='_blank' href='"+ str +"'>" +"<img src='images/"+ res +".jpg'></img>" + "</a>" + "</li>" );
+          var noImages = "<%= noImages %>";
+          if (noImages.includes(res)){
+            items.push( "<li id='" + val.id + "'>" + "<a target='_blank' href='"+ str +"'>" +"<img src='logos/noimage.jpg'></img>" + "</a>" + "</li>" );
+          } else {
+            items.push( "<li id='" + val.id + "'>" + "<a target='_blank' href='"+ str +"'>" +"<img src='images/"+ res +".jpg'></img>" + "</a>" + "</li>" );
+          }
 
           $.getJSON("json/"+ res +".json", function( steam ) {
             if (!(steam[res].data === undefined)) {
