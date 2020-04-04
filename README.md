@@ -1,4 +1,4 @@
-# GForcenow Games List
+# GeForceNow App
 
 This mini project will let you know :
 
