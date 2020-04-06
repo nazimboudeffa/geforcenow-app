@@ -1,23 +1,24 @@
 {
-  "name": "GForce Now App",
+  "name": "geforcenow-app",
   "version": "1.0.0",
-  "description": "Some cool tricks with GForce Now",
+  "description": "Some cool tricks with GeForce Now",
   "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nazimboudeffa/gforcenow-games.git"
+    "url": "git+https://github.com/nazimboudeffa/geforcenow-app.git"
   },
-  "author": "Nazim Boudeffa",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nazimboudeffa/gforcenow-games/issues"
+    "url": "https://github.com/nazimboudeffa/geforcenow-app/issues"
   },
-  "homepage": "https://github.com/nazimboudeffa/gforcenow-games#readme",
-  "dependencies": {
-    "ejs": "^3.0.1",
-    "express": "^4.17.1"
-  }
+  "homepage": "https://github.com/nazimboudeffa/geforcenow-app#readme"
 }
