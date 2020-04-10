@@ -12,6 +12,8 @@ You can get the images directly from my Mega account but it's not like if you up
 
 # Retired Games
 
+<img align="right" src="https://media.giphy.com/media/UVkTAeo45CrzR9e8PW/giphy.gif">
+
 I have made this repo just after the launch of GFN and just before the big companies started to retire their games, so here is the list of these companies games :
 
 - https://www.blizzard.com/en-us/games/
@@ -19,8 +21,6 @@ I have made this repo just after the launch of GFN and just before the big compa
 - https://bethesda.net/fr/store/home (Kept Only Wolfenstein YB)
 - https://www.2k.com/en-US/games/
 - https://www.thelongdark.com/
-
-<img align="right" src="https://media.giphy.com/media/UVkTAeo45CrzR9e8PW/giphy.gif">
 
 # Licence
 
