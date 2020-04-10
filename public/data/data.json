@@ -1,5 +1,221 @@
 {
   "data": [
+    {
+    "title": "S.T.A.L.K.E.R.: Call of Pripyat",
+    "publisher": "GSC Game World",
+    "genre": "Action,First-Person Shooter,Role Playing",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
+    "title": "Sniper: Ghost Warrior Contracts",
+    "publisher": "CI Games",
+    "genre": "Action,First-Person Shooter",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
+    "title": "Sniper Ghost Warrior 3",
+    "publisher": "CI Games",
+    "genre": "Action,First-Person Shooter",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
+    "title": "Saints Row: The Third",
+    "publisher": "Deep Silver",
+    "genre": "Action",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
+    "title": "Onmyoji",
+    "publisher": "NetEase Games",
+    "genre": "Adventure,Free To Play,Role Playing,Strategy",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
+    "title": "Main Assembly Beta",
+    "publisher": "Team17 Digital",
+    "genre": "Action,Adventure,Indie,Simulation",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+    {
+    "title": "Bus Simulator 18",
+    "publisher": "Astragon Entertainment",
+    "genre": "Simulation",
+    "hs": "No",
+    "fo": "No",
+    "ftp": "No",
+    "sl": "Steam"
+    },
+  {
+  "title": "Tropico 5",
+  "publisher": "Kalypso Media Group GmbH",
+  "genre": "Role Playing,Simulation,Strategy",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "The Cycle",
+  "publisher": "YAGER Development",
+  "genre": "Action,First-Person Shooter,Massively Multiplayer Online",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Epic Games Launcher"
+  },
+  {
+  "title": "SpeedRunners",
+  "publisher": "tinyBuild",
+  "genre": "Action,Casual,Indie,Racing,Sports",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "POSTAL 2",
+  "publisher": "Running With Scissors",
+  "genre": "Action,Adventure,First-Person Shooter,Indie",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Mount & Blade: With Fire & Sword",
+  "publisher": "TaleWorlds Entertainment",
+  "genre": "Action,Role Playing,Strategy",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Knights and Merchants",
+  "publisher": "TopWare Interactive",
+  "genre": "Simulation,Strategy",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Jack Orlando: Director's Cut",
+  "publisher": "TopWare Interactive",
+  "genre": "Adventure",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Dwarrows",
+  "publisher": "Lithic Entertainment Inc.",
+  "genre": "Adventure,Puzzle,Simulation",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Danganronpa 2: Goodbye Despair",
+  "publisher": "Spike Chunsoft Co., Ltd.",
+  "genre": "Adventure",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Mount & Blade II: Bannerlord",
+  "publisher": "TaleWorlds Entertainment",
+  "genre": "Role Playing,Action,Strategy,Simulation",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Jagged Alliance 2 - Wildfire",
+  "publisher": "TopWare Interactive",
+  "genre": "Role Playing,Strategy",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "IL-2 Sturmovik: Battle of Stalingrad",
+  "publisher": "1C Company",
+  "genre": "Action,Massively Multiplayer Online,Simulation",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Headsnatchers",
+  "publisher": "Iceberg Interactive",
+  "genre": "Action,Casual,Indie,Sports",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "The Guild 3",
+  "publisher": "THQ Nordic GmbH",
+  "genre": "Role Playing,Simulation,Strategy",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Dungeons 3",
+  "publisher": "Kalypso Media Digital",
+  "genre": "Simulation,Strategy",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Danganronpa: Trigger Happy Havoc",
+  "publisher": "Spike Chunsoft Co., Ltd.",
+  "genre": "Adventure,Puzzle",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
+  {
+  "title": "Arma 2: Operation Arrowhead",
+  "publisher": "Bohemia Interactive",
+  "genre": "Action,Simulation,Strategy",
+  "hs": "No",
+  "fo": "No",
+  "ftp": "No",
+  "sl": "Steam"
+  },
  {
  "title": "Apex Legends™",
  "publisher": "Electronic Arts Inc.",
@@ -2412,12 +2628,174 @@
  "sl": "Steam"
 },
 {
+	"title": "Comanche",
+	"publisher": "THQ Nordic",
+	"genre": "Action,Simulation",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "No",
+	"sl": "Steam"
+   },
+   {
+	"title": "Counter-Strike: Condition Zero",
+	"publisher": "Valve Corporation",
+	"genre": "Action",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "No",
+	"sl": "Steam"
+   },
+   {
+	"title": "Dreadlands",
+	"publisher": "Fatshark",
+	"genre": "Indie,Strategy",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "No",
+	"sl": "Steam"
+   },
+{
 	"title": "Victoria II",
 	"publisher": "Paradox Interactive",
 	"genre": "Strategy",
 	"hs": "No",
 	"fo": "No",
 	"ftp": "No",
+	"sl": "Steam"
+   },
+   {
+	"title": "Gujian 3",
+	"publisher": "Wangyuan Shengtang",
+	"genre": "Role Playing",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "No",
+	"sl": "Steam"
+   },
+   {
+	"title": "Path Of Exile",
+	"publisher": "Grinding Gear Games",
+	"genre": "Adventure,Free To Play,Massively Multiplayer Online",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "Yes",
+	"sl": "Steam"
+   },
+   {
+	"title": "Gold Rush: The Game",
+	"publisher": "Code Horizon",
+	"genre": "Indie,Simulation",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "No",
+	"sl": "Steam"
+   },
+   {
+	"title": "Granblue Fantasy: Versus",
+	"publisher": "XSEED Games",
+	"genre": "Action",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "No",
+	"sl": "Steam"
+   },
+   {
+	"title": "Panzer Corps 2",
+	"publisher": "Slitherine Ltd.",
+	"genre": "Strategy",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "No",
+	"sl": "Steam"
+   },
+   {
+	"title": "The Escapists 2",
+	"publisher": "Team 17 Digital",
+	"genre": "Indie,Simulation,Strategy",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "No",
+	"sl": "Steam"
+   },
+   {
+	"title": "TT: Isle of Man Ride on the Edge 2",
+	"publisher": "Bigben Interactive",
+	"genre": "Racing,Simulation,Sports",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "No",
+	"sl": "Steam"
+   },
+   {
+	"title": "War Robots",
+	"publisher": "Pixonic",
+	"genre": "Action,Free To Play",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "Yes",
+	"sl": "Steam"
+   },
+   {
+	"title": "World of Warplanes",
+	"publisher": "Wargaming",
+	"genre": "Action,Free To Play,Massively Multiplayer Online,Simulation",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "Yes",
+	"sl": "Steam"
+   },
+   {
+	"title": "Wargame: Red Dragon",
+	"publisher": "Eugen Systems",
+	"genre": "Indie,Simulation,Strategy",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "No",
+	"sl": "Steam"
+   },
+   {
+	"title": "The Escapists 2",
+	"publisher": "Team 17 Digital",
+	"genre": "Indie,Simulation,Strategy",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "No",
+	"sl": "Steam"
+   },
+   {
+	"title": "Stick Fight: The Game",
+	"publisher": "Landfall",
+	"genre": "Action,Casual,Indie",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "No",
+	"sl": "Steam"
+   },
+   {
+	"title": "Blood Bowl 2",
+	"publisher": "Focus Home Interactive",
+	"genre": "Strategy,Sports",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "No",
+	"sl": "Steam"
+   },
+   {
+	"title": "Dungeon Defenders II",
+	"publisher": "Trendy Entertainment",
+	"genre": "Action,Casual,Free To Play,Strategy,Role Playing,Casual",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "Yes",
+	"sl": "Steam"
+   },
+   {
+	"title": "Ring of Elysium",
+	"publisher": "Tencent Games",
+	"genre": "Action,Free To Play,Massively Multiplayer Online",
+	"hs": "No",
+	"fo": "No",
+	"ftp": "Yes",
 	"sl": "Steam"
    },
 {

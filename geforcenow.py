@@ -21,6 +21,7 @@ def menu():
                       B: Grab All Images
                       C: Sync with GForce
                       D: Grab the data file from www.gfnlist.com
+                      E: Grab the data file from NVidia GeForce Now
                       Q: Quit/Log Out
 
                       Please enter your choice: """)
@@ -33,6 +34,8 @@ def menu():
         todo()
     elif choice == "D" or choice =="d":
         todo()
+    elif choice == "E" or choice =="e":
+        grabGFNDataFile()
     elif choice=="Q" or choice=="q":
         sys.exit
     else:
@@ -46,6 +49,9 @@ def todo():
 def grabDataFile():
     if not os.path.exists('public/data/data.json') :
         fs = wget.download(url='https://www.gfnlist.com/data.json', out='public/data/data.json')
+
+def grabGFNDataFile():
+    fs = wget.download(url='https://static.nvidiagrid.net/supported-public-game-list/gfnpc.json', out='public/data/gfnpc.json')
 
 def grabAll():
     steamCount = 0
