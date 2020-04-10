@@ -20,7 +20,7 @@ I have made this repo just after the launch of GFN and just before the big compa
 - https://www.2k.com/en-US/games/
 - https://www.thelongdark.com/
 
-![GeForceNow](https://media.giphy.com/media/UVkTAeo45CrzR9e8PW/giphy.gif)
+<img align="right" src="https://media.giphy.com/media/UVkTAeo45CrzR9e8PW/giphy.gif">
 
 # Licence
 
