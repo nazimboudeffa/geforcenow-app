@@ -12,7 +12,7 @@ You can get the images directly from my Mega account but it's not like if you up
 
 # Retired Games
 
-<img align="right" src="https://media.giphy.com/media/UVkTAeo45CrzR9e8PW/giphy.gif">
+<img align="right" height="100" src="https://media.giphy.com/media/UVkTAeo45CrzR9e8PW/giphy.gif">
 
 I have made this repo just after the launch of GFN and just before the big companies started to retire their games, so here is the list of these companies games :
 
