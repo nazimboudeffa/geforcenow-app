@@ -110,9 +110,6 @@
         <li class="nav-item">
           <a class="nav-link" href="all">All Games</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Free Games</a>
-        </li>
     </div>
   </nav>
 
@@ -168,6 +165,14 @@
         "class": "my-new-list",
         html: items.join( "" )
       }).appendTo( "body" );
+
+      $("li").hover(
+        function() {
+          $( this ).append( $( "<span>"+$("a", this).attr('href')+"</span>" ) );
+        }, function() {
+          $( this ).find( "span" ).last().remove();
+        }
+      )
 
     });
   });

@@ -12,6 +12,9 @@ header = "\
  \______  /\___  / \____/|__|    \___  >___  > \____|__  /\____/ \/\_/   \n\
         \/     \/                    \/    \/          \/                \n"
 
+def main():
+    menu()
+
 def menu():
     print (header)
     print ("version 0.1")
@@ -27,13 +30,13 @@ def menu():
                       Please enter your choice: """)
 
     if choice == "A" or choice =="a":
-        todo()
+        grabAnImage()
     elif choice == "B" or choice =="b":
-        grabAll()
+        grabAllImages()
     elif choice == "C" or choice =="c":
         todo()
     elif choice == "D" or choice =="d":
-        todo()
+        grabDataFile()
     elif choice == "E" or choice =="e":
         grabGFNDataFile()
     elif choice=="Q" or choice=="q":
@@ -48,12 +51,35 @@ def todo():
 
 def grabDataFile():
     if not os.path.exists('public/data/data.json') :
-        fs = wget.download(url='https://www.gfnlist.com/data.json', out='public/data/data.json')
+        fs = wget.download(url='https://raw.githubusercontent.com/nazimboudeffa/gfnlist/master/public/data.json', out='public/data/data.json')
 
 def grabGFNDataFile():
-    fs = wget.download(url='https://static.nvidiagrid.net/supported-public-game-list/gfnpc.json', out='public/data/gfnpc.json')
+    #Leave GFNPC as it was in March the 1st
+    if not os.path.exists('public/data/gfnpc.json') :
+        fs = wget.download(url='https://static.nvidiagrid.net/supported-public-game-list/gfnpc.json', out='public/data/gfnpc.json')
 
-def grabAll():
+def grabAnImage():
+    gameID = input("Enter Game ID : ")
+    if not os.path.exists("public/json/"+gameID+".json") :
+        fs = wget.download(url='https://store.steampowered.com/api/appdetails?appids='+gameID, out="public/json/"+gameID+".json")
+        with open("public/json/"+gameID+".json", encoding="utf8") as f:
+            steam = f.read()
+            steamGame = json.loads(steam)
+    else :
+        with open("public/json/"+gameID+".json", encoding="utf8") as f:
+            steam = f.read()
+            steamGame = json.loads(steam)
+    if not os.path.exists('public/images/'+gameID+".jpg") :
+        print("Downloading " + gameID + " " + steamGame[gameID]['data']['name'])
+        if (steamGame[gameID]['success']== True) :
+            wget.download(url=steamGame[gameID]['data']['header_image'], out='public/images/'+gameID+".jpg")
+        else :
+            print(gameID + " " + steamGame[gameID]['data']['name'] + "Doesn't exist ... Please contact GForceNow on the forum")
+    else :
+        print("Already have "  + gameID + " " + steamGame[gameID]['data']['name'])
+    print("DONE!")
+
+def grabAllImages():
     steamCount = 0
     if not os.path.exists('public/data/gfnpc.json') :
         fs = wget.download(url='https://static.nvidiagrid.net/supported-public-game-list/gfnpc.json', out='public/data/gfnpc.json')
@@ -89,4 +115,5 @@ def grabAll():
                 print("Already have "  + gameID + " " + game['title'])
             print(str(steamCount) + " Steam games")
 
-menu()
+if __name__ == '__main__':
+    main()
