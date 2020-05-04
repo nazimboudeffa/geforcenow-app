@@ -21,6 +21,7 @@ I have made this repo just after the launch of GFN and just before the big compa
 - https://bethesda.net/fr/store/home (Kept Only Wolfenstein YB)
 - https://www.2k.com/en-US/games/
 - https://www.thelongdark.com/
+- https://www.wbgames.com/games
 
 # Licence
 
