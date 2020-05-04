@@ -22,6 +22,9 @@ I have made this repo just after the launch of GFN and just before the big compa
 - https://www.2k.com/en-US/games/
 - https://www.thelongdark.com/
 - https://www.wbgames.com/games
+- https://www.xbox.com/en-US/xbox-game-studios
+- https://www.codemasters.com/
+- https://www.klei.com/games
 
 # Licence
 
