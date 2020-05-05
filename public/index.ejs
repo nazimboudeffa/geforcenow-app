@@ -95,6 +95,18 @@
   .upcase {
     text-transform: uppercase;
   }
+
+  .game {
+    display:inline-block;
+  }
+
+  .transition {
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+  }
+
 </style>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
@@ -113,7 +125,9 @@
     </div>
   </nav>
 
-<h1></h1>
+<div class="container">
+  <h1></h1>
+</div>
 
 <script type="text/javascript">
 
@@ -127,13 +141,14 @@
       $.each( data, function( key, val ) {
         if(val.steamUrl != ""){
 
+          var title = val.title;
           var str = val.steamUrl;
           var res = str.replace("https://store.steampowered.com/app/", "");
           var noImages = "<%= noImages %>";
           if (noImages.includes(res)){
-            items.push( "<li class='game' id='" + val.id + "'>" + "<a target='_blank' href='"+ str +"'>" +"<img src='logos/noimage.jpg'></img>" + "</a>" + "</li>" );
+            items.push( "<div class='game' id='" + val.id + "'>" + "<a target='_blank' href='"+ "/game/" + res +"'>" + "<img src='logos/noimage.jpg'></img>" + "</a>" + "</div>" );
           } else {
-            items.push( "<li class='game' id='" + val.id + "'>" + "<a target='_blank' href='"+ str +"'>" +"<img src='images/"+ res +".jpg'></img>" + "</a>" + "</li>" );
+            items.push( "<div class='game' id='" + val.id + "'>" + "<a target='_blank' href='"+ "/game/" + res +"'>" + "<img src='images/"+ res +".jpg'></img>" + "</a>" + "</div>" );
           }
 
           $.getJSON("json/"+ res +".json", function( steam ) {
@@ -147,30 +162,29 @@
         } else {
           switch (val.publisher) {
             case "Ubisoft" :
-              items.push( "<li id='" + val.id + "'>" + "<a target='_blank' href='https://www.ubisoft.com/en-us/games'>" +"<img src='logos/ubisoft.jpg'></img>" + "</a>" + "</li>" );
+              items.push( "<div class='game' id='" + val.id + "'>" + "<a target='_blank' href='https://www.ubisoft.com/en-us/games'>" +"<img src='logos/ubisoft.jpg'></img>" + "</a>" + "</div>" );
             break;
             case "Epic Games, Inc." :
-              items.push( "<li id='" + val.id + "'>" + "<a target='_blank' href='https://www.epicgames.com/store/fr/free-games'>" +"<img src='logos/epicgames.jpg'></img>" + "</a>" + "</li>" );
+              items.push( "<div class='game' id='" + val.id + "'>" + "<a target='_blank' href='https://www.epicgames.com/store/fr/free-games'>" +"<img src='logos/epicgames.jpg'></img>" + "</a>" + "</div>" );
             break;
             default :
-              items.push( "<li id='" + val.id + "'>" + "<a target='_blank' href='https://www.nvidia.com/fr-fr/geforce-now/games'>" +"<img src='logos/gforcenow.jpg'></img>" + "</a>" + "</li>" );
+              items.push( "<div class='game' id='" + val.id + "'>" + "<a target='_blank' href='https://www.nvidia.com/fr-fr/geforce-now/games'>" +"<img src='logos/gforcenow.jpg'></img>" + "</a>" + "</div>" );
           }
         }
 
       });
 
-      $('h1').append("Total number of games "+ data.length);
+      $('h1').append("Total number of games " + data.length);
 
-      $( "<ul/>", {
-        "class": "my-new-list",
-        html: items.join( "" )
-      }).appendTo( "body" );
+      $(".container").append(items.join( "" ));
 
       $(".game").hover(
         function() {
-          $( this ).append( $( "<span>"+$("a", this).attr('href')+"</span>" ) );
+          $("img", this).addClass('transition');
+          $(".info", this).fadeIn()
         }, function() {
-          $( this ).find( "span" ).last().remove();
+          $("img", this).removeClass('transition');
+          $(".info", this).fadeOut()
         }
       )
 

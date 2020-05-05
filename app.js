@@ -37,8 +37,12 @@ app.get('/all', function(req, res) {
   res.render('all')
 })
 
+app.get('/game/:game', function(req, res) {
+  res.render('game', { game : req.params.game })
+})
+
 let port = 3000;
 
 app.listen(port, function() {
-  console.log('Example app listening on port 3000!')
+  console.log('App listening on port 3000!')
 })
