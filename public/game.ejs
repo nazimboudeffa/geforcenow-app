@@ -122,7 +122,8 @@
 
       $('.container').append("<h1>"+myGame['name']+"</h1>");
       $('.container').append("<div><img src =../images/" + gameID + ".jpg></div>");
-      $('.container').append("<div><a href =https://store.steampowered.com/app/" + gameID + ">https://store.steampowered.com/app/" + gameID + "</a></div>");
+      $('.container').append("<div> STEAM : <a href ='https://store.steampowered.com/app/" + gameID + "'>https://store.steampowered.com/app/" + gameID + "</a></div>");
+      $('.container').append("INSTANT GAMING : " + "<a href ='https://www.instant-gaming.com/fr/rechercher/?query=" + myGame['name'] + "'>" + myGame['name'] + "</a>");
     })
 
   });
