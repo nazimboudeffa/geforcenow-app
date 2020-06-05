@@ -1,3 +1,5 @@
+![GitHub repo size](https://img.shields.io/github/repo-size/nazimboudeffa/geforcenow-app)
+
 # GeForceNow App
 
 This mini project will let you know :
