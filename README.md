@@ -28,6 +28,10 @@ I have made this repo just after the launch of GFN and just before the big compa
 - https://www.codemasters.com/
 - https://www.klei.com/games
 
+# Blog
+
+https://retromatrix.tumblr.com/tagged/geforcenow
+
 # Licence
 
 There is an issue on the number of call to the Steam Web API it's why you should use this script, but becarefull with python scripts on GitHub not all of them are correct and may supress an important file or folder from you computer, so it's why again I put a GNU GPL v3 in my repos
