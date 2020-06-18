@@ -22,15 +22,16 @@ I have made this repo just after the launch of GFN and just before the big compa
 - https://www.activision.com/fr/games
 - https://bethesda.net/fr/store/home (Kept Only Wolfenstein YB)
 - https://www.2k.com/en-US/games/
-- https://www.thelongdark.com/
+- https://www.thelongdark.com/ (BACK on the 28th of May 2020)
 - https://www.wbgames.com/games
 - https://www.xbox.com/en-US/xbox-game-studios
 - https://www.codemasters.com/
 - https://www.klei.com/games
+- https://square-enix-games.com/ (BACK on the 18th of June 2020)
 
 # Blog
 
-https://retromatrix.tumblr.com/tagged/geforcenow
+👉 https://retromatrix.tumblr.com/tagged/geforcenow
 
 # Licence
 
