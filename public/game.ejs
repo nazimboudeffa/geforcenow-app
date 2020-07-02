@@ -93,21 +93,21 @@
 
 </style>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-    <a class="navbar-brand" href="/">GeForce NOW Games List</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">My Games</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="all">All Games</a>
-        </li>
-    </div>
-  </nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <a class="navbar-brand" href="/">GeForce NOW Games List</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/images">Images</a>
+      </li>
+  </div>
+</nav>
 
 <div class="container">
 </div>
@@ -118,13 +118,13 @@
     var gameID = <%= game %>;
     $.getJSON( "../json/"+gameID+".json", function(data) {
 
-      var myGame = data[gameID]['data'];
+      var game = data[gameID]['data'];
 
-      $('.container').append("<h1>"+myGame['name']+"</h1>");
+      $('.container').append("<h1>"+game['name']+"</h1>");
       $('.container').append("<div><img src =../images/" + gameID + ".jpg></div>");
       $('.container').append("<div>STEAM : <a href ='https://store.steampowered.com/app/" + gameID + "'>https://store.steampowered.com/app/" + gameID + "</a></div>");
-      $('.container').append("<div>INSTANT GAMING : " + "<a href ='https://www.instant-gaming.com/fr/rechercher/?query=" + myGame['name'] + "'>" + myGame['name'] + "</a></div>");
-      $('.container').append("<div>GOG : " + "<a href ='https://www.gog.com/games?search=" + myGame['name'] + "'>" + myGame['name'] + "</a></div>");
+      $('.container').append("<div>INSTANT GAMING : " + "<a href ='https://www.instant-gaming.com/fr/rechercher/?query=" + game['name'] + "'>" + game['name'] + "</a></div>");
+      $('.container').append("<div>GOG : " + "<a href ='https://www.gog.com/games?search=" + game['name'] + "'>" + game['name'] + "</a></div>");
     })
 
   });

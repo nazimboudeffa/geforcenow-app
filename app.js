@@ -28,13 +28,13 @@ console.log(noImages);
 app.use(express.static('public'));
 
 app.get('/', function(req, res) {
-  res.render('index', {
-    noImages: noImages
-  })
+  res.render('index')
 })
 
-app.get('/all', function(req, res) {
-  res.render('all')
+app.get('/images', function(req, res) {
+  res.render('images', {
+    noImages: noImages
+  })
 })
 
 app.get('/game/:game', function(req, res) {
@@ -44,5 +44,5 @@ app.get('/game/:game', function(req, res) {
 let port = 3000;
 
 app.listen(port, function() {
-  console.log('App listening on port 3000!')
+  console.log('Example app listening on port 3000!')
 })
