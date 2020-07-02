@@ -124,7 +124,9 @@ def steamPrices():
             data = {}
             data['data'] = []
             for game in games :
-                if game['steamUrl'] != '' :
+                steamUrl = game['steamUrl']
+                print(steamUrl)
+                if steamUrl != '' :
                     hs = 'No'
                     fo = 'No'
                     ftp = 'No'
@@ -137,6 +139,14 @@ def steamPrices():
                         if genre == 'Free To Play' :
                             ftp = 'Yes'
                     sl = 'Steam'
+                    gameID = steamUrl.replace("https://store.steampowered.com/app/", "")
+                    if not os.path.exists("public/json/"+gameID+".json") :
+                        print(gameID)
+                    else :
+                        with open("public/json/"+gameID+".json", encoding="utf8") as f :
+                            steam = f.read()
+                            steamGame = json.loads(steam)
+                            price = steamGame[gameID]['data']['price_overview']['initial']
                     data['data'].append({
                         'title': game['title'],
                         'publisher': game['publisher'],
@@ -144,7 +154,8 @@ def steamPrices():
                         'hs': hs,
                         'fo': fo,
                         'ftp': ftp,
-                        'sl': sl
+                        'sl': sl,
+                        'p': price
                     })
             with open('public/data/steam.json', 'w') as outfile:
                 json.dump(data, outfile)
