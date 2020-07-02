@@ -31,6 +31,10 @@ app.get('/', function(req, res) {
   res.render('index')
 })
 
+app.get('/steam', function(req, res) {
+  res.render('steam')
+})
+
 app.get('/images', function(req, res) {
   res.render('images', {
     noImages: noImages

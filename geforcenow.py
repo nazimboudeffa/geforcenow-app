@@ -25,6 +25,7 @@ def menu():
                       C: Sync with GForce
                       D: Grab the data file from www.gfnlist.com
                       E: Grab the data file from NVidia GeForce Now
+                      F: Create Steam Prices and Offers
                       Q: Quit/Log Out
 
                       Please enter your choice: """)
@@ -39,6 +40,8 @@ def menu():
         grabDataFile()
     elif choice == "E" or choice =="e":
         grabGFNDataFile()
+    elif choice == "F" or choice =="f":
+        steamPrices()
     elif choice=="Q" or choice=="q":
         sys.exit
     else:
@@ -114,6 +117,37 @@ def grabAllImages():
             else :
                 print("Already have "  + gameID + " " + game['title'])
             print(str(steamCount) + " Steam games")
+
+def steamPrices():
+    with open('public/data/gfnpc.json', encoding="utf8") as f :
+            games = json.loads(f.read())
+            data = {}
+            data['data'] = []
+            for game in games :
+                if game['steamUrl'] != '' :
+                    hs = 'No'
+                    fo = 'No'
+                    ftp = 'No'
+                    g = ','.join(game['genres'])
+                    if game['isHighlightsSupported'] :
+                        hs = 'Yes'
+                    if game['isFullyOptimized'] :
+                        fo = 'Yes'
+                    for genre in game['genres'] :
+                        if genre == 'Free To Play' :
+                            ftp = 'Yes'
+                    sl = 'Steam'
+                    data['data'].append({
+                        'title': game['title'],
+                        'publisher': game['publisher'],
+                        'genre': g,
+                        'hs': hs,
+                        'fo': fo,
+                        'ftp': ftp,
+                        'sl': sl
+                    })
+            with open('public/data/steam.json', 'w') as outfile:
+                json.dump(data, outfile)
 
 if __name__ == '__main__':
     main()
