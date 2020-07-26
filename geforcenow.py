@@ -26,6 +26,7 @@ def menu():
                       D: Grab the data file from www.gfnlist.com
                       E: Grab the data file from NVidia GeForce Now
                       F: Create Steam Prices and Offers
+                      G: Grab Publisher
                       Q: Quit/Log Out
 
                       Please enter your choice: """)
@@ -42,6 +43,8 @@ def menu():
         grabGFNDataFile()
     elif choice == "F" or choice =="f":
         steamPrices()
+    elif choice == "G" or choice =="g":
+        publisher()
     elif choice=="Q" or choice=="q":
         sys.exit
     else:
@@ -159,6 +162,23 @@ def steamPrices():
                     })
             with open('public/data/steam.json', 'w') as outfile:
                 json.dump(data, outfile)
+
+def publisher():
+    with open('public/data/gfnpc.json', encoding="utf8") as f :
+        games = json.loads(f.read())
+        for game in games :
+            steamUrl = game['steamUrl']
+            gameID = steamUrl.replace("https://store.steampowered.com/app/", "")
+            if not os.path.exists("public/json/"+gameID+".json") :
+                print(gameID)
+            else :
+                with open("public/json/"+gameID+".json", encoding="utf8") as f :
+                    steam = f.read()
+                    steamGame = json.loads(steam)
+                    publisher = steamGame[gameID]['data']['publishers'][0]
+                    if not os.path.exists("public/publisher/"+publisher+".html") :
+                        print(gameID+" "+publisher)
+                        wget.download(url='https://store.steampowered.com/developer/'+publisher, out="public/publisher/"+str(publisher)+".html")
 
 if __name__ == '__main__':
     main()
