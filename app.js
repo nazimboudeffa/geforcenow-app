@@ -32,12 +32,14 @@ gfn.forEach((item, i) => {
         if (obj.price_overview != undefined){
           steamGames.push({
             "name" : obj.name,
-            "price": parseInt(obj.price_overview.initial)/100
+            "price": parseInt(obj.price_overview.initial)/100,
+            "year": (obj.release_date.date).slice(-4)
           });
         } else {
           steamGames.push({
             "name" : obj.name,
-            "price": "N/A"
+            "price": "N/A",
+            "year": (obj.release_date.date).slice(-4)
           });
         }
       });
@@ -58,6 +60,7 @@ app.get('/', function(req, res) {
 })
 
 app.get('/prices', function(req, res) {
+  //console.log(steamGames);
   res.render('prices', {games : steamGames})
 })
 
