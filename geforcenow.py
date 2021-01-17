@@ -62,7 +62,7 @@ def grabDataFile():
 def grabGFNDataFile():
     #Leave GFNPC as it was in March the 1st
     if not os.path.exists('public/data/gfnpc.json') :
-        fs = wget.download(url='https://static.nvidiagrid.net/supported-public-game-list/gfnpc.json', out='public/data/gfnpc.json')
+        fs = wget.download(url='https://raw.githubusercontent.com/nazimboudeffa/gfnlist/master/gfnpc.json', out='public/data/gfnpc.json')
 
 def grabAnImage():
     gameID = input("Enter Game ID : ")
