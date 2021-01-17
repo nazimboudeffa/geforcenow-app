@@ -23,7 +23,7 @@ def menu():
                       A: Grab An Image
                       B: Grab All Images
                       C: Sync with GForce
-                      D: Grab the data file from www.gfnlist.com
+                      D: Grab the data file from www.gfngames.tk
                       E: Grab the data file from NVidia GeForce Now
                       F: Create Steam Prices and Offers
                       G: Grab Publisher
