@@ -32,7 +32,7 @@ gfn.forEach((item, i) => {
         if (obj.price_overview != undefined){
           steamGames.push({
             "name" : obj.name,
-            "price": obj.price_overview.initial
+            "price": (parseInt(obj.price_overview.initial)/100).toString()
           });
         } else {
           steamGames.push({
