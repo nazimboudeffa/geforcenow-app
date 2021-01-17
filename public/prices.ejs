@@ -125,27 +125,13 @@
         <thead>
           <tr>
             <th>Title</th>
-            <th>Publisher</th>
-            <th>Genre</th>
-            <!--
-            <th>Highlights Supported?</th>
-            -->
-            <th>Fully Optimised?</th>
-            <th>Free?</th>
-            <th>Library</th>
+            <th>Price</th>
           </tr>
         </thead>
         <tfoot>
           <tr>
             <th>title...</th>
-            <th>publisher...</th>
-            <th>genre...</th>
-            <!--
-            <th>support...</th>
-            -->
-            <th>optimised...</th>
-            <th>free?</th>
-            <th>library..</th>
+            <th>price...</th>
           </tr>
         </tfoot>
       </table>
@@ -155,7 +141,7 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('#gameslist').DataTable({
-        "ajax": "data/data.json",
+        "data": <%-JSON.stringify(games)%>,
         "searching": true,
         "ordering": true,
         "info": true,
@@ -166,19 +152,9 @@
         "pagingType": "full_numbers",
         "dom": 'lrtip',
         "columns": [{
-          "data": "title"
+          "data": "name"
         }, {
-          "data": "publisher"
-        }, {
-          "data": "genre"
-        }/*, {
-          "data": "hs"
-        }*/, {
-          "data": "fo"
-        }, {
-          "data": "ftp"
-        }, {
-          "data": "sl"
+          "data": "price"
         }]
       });
       $('#gameslist tfoot th').each(function() {

@@ -5,6 +5,7 @@ const ejs = require('ejs')
 const path = require('path')
 var gfn = require('./public/data/gfnpc.json')
 var noImages = [];
+var steamGames = [];
 
 // set the view engine to ejs
 app.set('view engine', 'ejs')
@@ -21,6 +22,31 @@ gfn.forEach((item, i) => {
 });
 
 
+gfn.forEach((item, i) => {
+  if (item.steamUrl != "") {
+    var str = item.steamUrl
+    var val = str.replace("https://store.steampowered.com/app/", "")
+    if (fs.existsSync("./public/json/" + val + ".json")) {
+      fs.readFile("./public/json/" + val + ".json", function(err, data){
+        var obj = JSON.parse(data)[val].data;
+        if (obj.price_overview != undefined){
+          steamGames.push({
+            "name" : obj.name,
+            "price": obj.price_overview.initial
+          });
+        } else {
+          steamGames.push({
+            "name" : obj.name,
+            "price": "N/A"
+          });
+        }
+      });
+    } else {
+      //TODO : read from steam, but it's a max of 100.000 call a day
+    }
+  }
+});
+
 console.log(noImages.length);
 console.log(noImages);
 
@@ -31,8 +57,8 @@ app.get('/', function(req, res) {
   res.render('index')
 })
 
-app.get('/publishers', function(req, res) {
-  res.render('publishers')
+app.get('/prices', function(req, res) {
+  res.render('prices', {games : steamGames})
 })
 
 app.get('/images', function(req, res) {
