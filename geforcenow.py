@@ -44,7 +44,7 @@ def menu():
     elif choice == "F" or choice =="f":
         steamPrices()
     elif choice == "G" or choice =="g":
-        publisher()
+        grabPublisher()
     elif choice=="Q" or choice=="q":
         sys.exit
     else:
@@ -163,7 +163,7 @@ def steamPrices():
             with open('public/data/steam.json', 'w') as outfile:
                 json.dump(data, outfile)
 
-def publisher():
+def grabPublisher():
     with open('public/data/gfnpc.json', encoding="utf8") as f :
         games = json.loads(f.read())
         for game in games :
