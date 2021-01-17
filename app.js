@@ -31,8 +31,8 @@ app.get('/', function(req, res) {
   res.render('index')
 })
 
-app.get('/prices', function(req, res) {
-  res.render('Prices')
+app.get('/publishers', function(req, res) {
+  res.render('publishers')
 })
 
 app.get('/images', function(req, res) {
